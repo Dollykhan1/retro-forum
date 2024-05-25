@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro Forum</title>
+
+    <!-- Tailwind CSS and Daisy UI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!--Raw CSS style-->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/6c13a282a2.js" crossorigin="anonymous"></script>
+
+</head>
+<body class="mulish">
+    <header class="container mx-auto lg:pt-12 lg:px-32 p-4">
+        <!-- navbar section -->
+        <nav class="flex justify-between items-center flex-col lg:flex-row gap-6">
+            <div>
+                <h1 class="text-[rgb(18,19,45)] text-4xl font-black border-2 border-dashed border-[rgba(3,7,18,0.1)]">ReTro</h1>
+            </div>
+                
+            <div class="flex gap-6 flex-col lg:flex-row items-center justify-start">
+                <div class="flex gap-6 ">
+                    <button class="lg:w-14 lg:h-14 w-10 h-10 border border-[rgba(3,7,18,0.1)] rounded-full bg-[3,7,18,0.03]" title="home"><i class="fa-solid fa-house"></i></button>
+                    <button title="Edit" class="lg:w-14 lg:h-14 w-10 h-10 border border-[rgba(3,7,18,0.1)] rounded-full bg-[3,7,18,0.03]"><i class="fa-solid fa-pen"></i></button>
+                    <button title="Add" class="lg:w-14 lg:h-14 w-10 h-10 border border-[rgba(3,7,18,0.1)] rounded-full bg-[3,7,18,0.03]"><i class="fa-solid fa-user-plus"></i></button>
+                    <button title="awesome" class="lg:w-14 lg:h-14 w-10 h-10 border border-[rgba(3,7,18,0.1)] rounded-full bg-[3,7,18,0.03]"><i class="fa-solid fa-font-awesome"></i></button>
+                </div>
+                <div>
+                    <button  class="lg:px-10 lg:py-4 px-5 py-2 border border-[rgba(3,7,18,0.1)] bg-[rgb(121,125,252)] text-white font-bold rounded-[50px]">Sign In</button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- banner section -->
+        <div class="banner lg:mt-12 mt-7">
+            <div class="lg:w-[1170px] mx-auto lg:h-[550px] bg-[rgb(18,19,45)] lg:bg-[url(images/bgbanner.png)] bg-no-repeat rounded-3xl bg-bottom p-4">
+                <div class="text-white flex lg:flex-row flex-col gap-4 lg:justify-between lg:items-center lg:px-28 lg:py-32">
+                    <div>
+                        <h1 class="font-black text-3xl lg:text-6xl">Welcome to the <br> <span class="text-[rgb(121,125,252)]">ReTro</span> Forum</h1>
+                        <p class="text-[rgba(255,255,255,0.8)] text-xl font-medium mt-5 mb-8">Share your favorite opinion and win and wp <br> forum coffee mug!</p>
+                        <div class="bg-white lg:w-[400px] flex p-1 rounded-[50px]">
+                            <input id="input-field" class="bg-transparent px-3 lg:px-5 w-full rounded-[50px] outline-none text-[rgba(3,7,18,0.5)]" type="text" placeholder="Search here anything"> 
+                            <button onclick="clickIdName()" class="bg-[rgb(121,125,252)] px-3 py-2 lg:px-7 lg:py-4 font-bold rounded-[46px]">Search</button>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-3xl text-black lg:w-96 lg:h-72 lg:p-12 p-6">
+                        <table class="w-full h-full lg:text-2xl lg:font-medium text-[rgba(18,19,45,0.8)]">
+                            <tr>
+                                <td>Registered Users</td>
+                                <td>01</td>
+                            </tr>
+                            <tr>
+                                <td>Forum</td>
+                                <td>05</td>
+                            </tr>
+                            <tr>
+                                <td>Topics</td>
+                                <td>01</td>
+                            </tr>
+                            <tr>
+                                <td>Replies</td>
+                                <td>01</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <main class="container mx-auto lg:px-32 p-4 lg:mt-24 mt-8">
+        <section class="text-center">
+            <h1 class="lg:text-4xl text-3xl font-black text-[rgb(18,19,45)]">Let's Discuss</h1>
+            <p class="lg:text-lg text-[rgba(18,19,45,0.6)]">Yes, you can run unit tests and view the results directly within the app. The <br> integrated testing features allow for a streamlined .</p>
+        </section>
+
+        <section id="loading-section" class="hidden">
+            <div class="text-center">
+                <span class="loading loading-spinner loading-lg"></span>
+            </div>
+        </section>
+
+        <section class="mt-12 flex lg:flex-row flex-col gap-6">
+            <div id="main-second-section-div" class="flex flex-col gap-6 w-full">
+                <!-- thats div code in javaScript  -->
+            </div>
+            <div>
+                <div class="lg:w-[374px] rounded-3xl bg-[rgba(18,19,45,0.05)] p-6">
+                    <div class="flex items-center justify-between w-full mb-4">
+                        <h4 class="text-xl font-bold">Title</h4>
+                        <p class="text-[rgba(18,19,45,0.6)]">Mark as read (<span id="massage-count">0</span>)</p>
+                    </div>
+                    <div id="card-message" class="flex gap-4 flex-col">
+                        <!-- that code in javascript -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-24">
+            <div class="w-full lg:h-[403px] bg-[rgb(18,19,45)] rounded-3xl flex lg:flex-row flex-col text-white justify-between lg:pl-24 lg:text-start text-center">
+                <div class=" flex items-center justify-center">
+                    <div>
+                        <h1 class="lg:text-4xl text-2xl font-black mt-3">Join Our Forum</h1>
+                        <p class="my-8 lg:text-lg font-medium text-[rgba(255,255,255,0.8)]">Share your favorite opinion and win and wp forum coffee mug! Yes, you can <br> run unit tests and view the results directly within the app. </p>
+                        <button class="font-bold text-xl bg-[rgb(121,125,252)] px-10 py-4 rounded-[50px]">Registered Now</button>
+                    </div>
+                </div>
+                <div class="lg:w-[390px] lg:h-[341px] border-2 border-dashed border-[gray] mt-16 flex items-end">
+                    <img src="images/joinforum.png" alt="" class="w-full">
+                </div>
+            </div>
+        </section>
+
+        <section class="lg:mt-24 mt-8">
+            <div class="text-center">
+                <h1 class="lg:text-4xl text-2xl font-black text-[rgb(18,19,45)]">Latest Posts</h1>
+                <p class="lg:text-lg text-[rgba(18,19,45,0.6)]">Yes, you can run unit tests and view the results directly within the app. The <br> integrated testing features allow for a streamlined .</p>
+            </div>
+            <div id="latest-post-cards" class="mt-12 flex flex-wrap justify-between">
+                <!-- code in JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="container mx-auto lg:mt-[100px] mt-[50px] lg:pt-[100px] pt-[30px] p-4 bg-[linear-gradient(180.00deg,rgba(18,19,45,0.05),rgba(18,19,45,0)100%)]">
+        <div class="lg:w-[1170px] lg:h-[289px] mx-auto text-center space-y-5">
+            <h1 class="text-4xl font-black text-[rgb(18,19,45)]">
+                ReTro
+            </h1>
+            <p class="text-[rgba(18,19,45,0.7)]">
+                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots <br> in a piece of classical Latin literature from 45 BC
+            </p>
+            <div class="flex flex-row gap-10 justify-center items-center">
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+            </div>
+            <hr class="mt-12 border-[rgba(48,50,94,0.1)]">
+            <p class="mt-12 text-[rgba(18,19,45,0.5)]">2017, All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- script -->
+    <script src="retro.js"></script>
+</body>
+</html>
